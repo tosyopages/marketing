@@ -76,6 +76,9 @@
     .card_box {
         @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
     }
+    .card_box2 {
+        @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20;
+    }
 
     .card {
         @apply bg-[#FFF4D9] border border-yellow-300 rounded-lg p-4;
