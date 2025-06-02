@@ -112,7 +112,7 @@
         }
 
         &>div {
-            @apply relative bg-gray-100 border border-gray-300 p-4 rounded-lg max-w-sm;
+            @apply relative bg-gray-100 border border-gray-300 p-4 rounded-lg max-w-sm shadow;
 
             &>div:first-of-type {
                 @apply absolute -left-2 bottom-2 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-gray-300;
@@ -129,7 +129,7 @@
         @apply flex items-end gap-3 justify-end mt-5;
 
         &>div {
-            @apply relative bg-blue-100 border border-blue-300 p-4 rounded-lg max-w-sm;
+            @apply relative bg-blue-100 border border-blue-300 p-4 rounded-lg max-w-sm shadow;
 
             &>div:first-of-type {
                 @apply absolute -right-2 bottom-2 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-blue-300;
@@ -144,4 +144,6 @@
             @apply w-10 h-10 rounded-full object-cover;
         }
     }
+
+    
 }
