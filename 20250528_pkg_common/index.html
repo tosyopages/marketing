@@ -2,23 +2,35 @@
 <html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-      .hero-section {
-        background: linear-gradient(to right, #f5f7fa, #c3cfe2);
-      }
-              .bg-primary {
+    <style>
+        .navigation {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+        }
+
+        .bg-primary {
             background-color: #3182ce;
         }
+
         .bg-secondary {
             background-color: #f7fafc;
         }
-              .text-primary {
+
+        .text-primary {
             color: #3182ce;
         }
-              .btn-primary {
+
+        .btn-primary {
             background-color: #3182ce;
             color: white;
             padding: 0.75rem 1.5rem;
@@ -26,14 +38,17 @@
             font-weight: 500;
             transition: all 0.3s;
         }
+
         .btn-primary:hover {
             background-color: #2c5282;
             transform: translateY(-2px);
         }
-                .section {
+
+        .section {
             padding: 3rem 0;
         }
-                .feature-icon {
+
+        .feature-icon {
             background-color: #ebf4ff;
             color: #3182ce;
             width: 60px;
@@ -45,16 +60,19 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-                .card-feature {
+
+        .card-feature {
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s;
         }
-                .step-blue {
+
+        .step-blue {
             position: relative;
             padding-left: 60px;
             margin-bottom: 2rem;
         }
+
         .step-blue-number {
             position: absolute;
             left: 0;
@@ -69,7 +87,8 @@
             justify-content: center;
             font-weight: bold;
         }
-                .campaign-badge {
+
+        .campaign-badge {
             background-color: #ed8936;
             color: white;
             font-weight: bold;
@@ -78,42 +97,43 @@
             display: inline-block;
             margin-bottom: 1rem;
         }
-                .product-img {
+
+        .product-img {
             height: 15rem;
-            object-fit:contain;
+            object-fit: contain;
             border-radius: 0.5rem 0.5rem 0 0;
             width: 100%;
-            padding-top:1rem;
+            padding-top: 1rem;
 
         }
-
-  </style>
+    </style>
     <link href="../output.css" rel="stylesheet">
     <!-- our project just needs Font Awesome Solid + Brands -->
-  <link href="../fa/css/all.min.css" rel="stylesheet" />
+    <link href="../fa/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-<section class="z-100">
-  <header class="fixed top-0 shadow-md flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3">
-    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
-      <div class="flex items-center justify-between">
-        <a class="flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80"
-          href="https://tosyo.co.jp" aria-label="Brand">
-          <image class="h-8" src="./image/image2.png"></image>
-        </a>
-        <!-- <div class="sm:hidden">
+
+        <header
+            class="navigation z-100 fixed top-0 shadow-md flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-3">
+            <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+                <div class="flex items-center justify-between">
+                    <a class="flex-none text-xl font-semibold dark:text-white focus:outline-hidden focus:opacity-80"
+                        href="https://tosyo.co.jp" aria-label="Brand">
+                        <image class="h-8" src="./image/image2.png"></image>
+                    </a>
+                    <!-- <div class="sm:hidden">
         <button type="button" class="hs-collapse-toggle relative size-9 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10" id="hs-navbar-example-collapse" aria-expanded="false" aria-controls="hs-navbar-example" aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-example">
           <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
           <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           <span class="sr-only">Toggle navigation</span>
         </button>
       </div> -->
-      </div>
-      <div class="flex mt-2 ml-3 justify-end">
-        <div class="btn-primary inline-block text-lg"><a href="#contact" >お問い合わせ先</a></div>
-      </div>
-      <!-- <div id="hs-navbar-example" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block" aria-labelledby="hs-navbar-example-collapse">
+                </div>
+                <div class="flex mt-2 ml-3 justify-end">
+                    <div class="btn-primary inline-block text-lg"><a href="#contact">お問い合わせ先</a></div>
+                </div>
+                <!-- <div id="hs-navbar-example" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block" aria-labelledby="hs-navbar-example-collapse">
       <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
         <a class="font-medium text-blue-500 focus:outline-hidden" href="#" aria-current="page">Landing</a>
         <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Account</a>
@@ -121,16 +141,16 @@
         <a class="font-medium text-gray-600 hover:text-gray-400 focus:outline-hidden focus:text-gray-400 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">Blog</a>
       </div>
     </div> -->
-    </nav>
-  </header>
-  </section>
+            </nav>
+        </header>
+
     <!-- ヒーローセクション -->
     <section class="hero-section py-20" id="hero">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                        あなたの会社の<br><span class="text-blue-500">専属グッズ企画室</span><br>TOSYOにおまかせ
+                        あなたの会社の<br><span class="text-primary">専属グッズ企画室</span><br>TOSYOにおまかせ
                     </h1>
                     <p class="text-xl mb-8">
                         ロゴ入りグッズからキャラクターグッズまで、企画・デザイン・製作をワンストップで。
@@ -150,7 +170,7 @@
     <section class="section bg-white" id="problems">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">グッズ制作でこんなお悩みはありませんか？</h2>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card-feature bg-white p-6">
                     <div class="feature-icon">
@@ -159,7 +179,7 @@
                     <h3 class="text-xl font-bold mb-4">ノベルティ制作に困っている</h3>
                     <p>取引先への贈答用やイベント用のノベルティ製作。どこに頼めばいいか分からない、デザインのイメージが湧かない...</p>
                 </div>
-                
+
                 <div class="card-feature bg-white p-6">
                     <div class="feature-icon">
                         <i class="fas fa-tshirt"></i>
@@ -167,7 +187,7 @@
                     <h3 class="text-xl font-bold mb-4">社内用品の制作が大変</h3>
                     <p>社員が使用するロゴ入り文房具やスタッフジャンパーの製作。大量発注が必要と思って二の足を踏んでいませんか？</p>
                 </div>
-                
+
                 <div class="card-feature bg-white p-6">
                     <div class="feature-icon">
                         <i class="fas fa-box-open"></i>
@@ -176,7 +196,7 @@
                     <p>会社の商品パッケージやオリジナルキャラクターのグッズ製作と販売。専門知識がなく、手続きが複雑そうで...</p>
                 </div>
             </div>
-            
+
             <div class="mt-12 text-center text-lg">
                 <p>グッズの制作をしようと思うと、商品製造に関する知識がない場合、<span class="font-bold">非常に大変です。</span></p>
                 <p class="text-xl font-bold mt-4 text-primary">TOSYOはそんなお客様の専属グッズ企画室です！</p>
@@ -190,15 +210,16 @@
             <h2 class="text-3xl font-bold text-center mb-12">
                 "グッズ制作"という面倒、<br>TOSYOがまるっと引き受けます
             </h2>
-            
+
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image6.png" alt="グッズ制作サービス" class="rounded-lg shadow-xl">
+                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image6.png"
+                        alt="グッズ制作サービス" class="rounded-lg shadow-xl">
                 </div>
-                
+
                 <div class="md:w-1/2 md:pl-12">
                     <h3 class="text-2xl font-bold mb-6">TOSYOのグッズ制作サービスが選ばれる理由</h3>
-                    
+
                     <div class="mb-4">
                         <h4 class="text-xl font-bold flex items-center">
                             <i class="fas fa-check-circle text-primary mr-2"></i>
@@ -206,7 +227,7 @@
                         </h4>
                         <p class="ml-8">最低ロットの縛りなし。必要な数だけ発注できます。</p>
                     </div>
-                    
+
                     <div class="mb-4">
                         <h4 class="text-xl font-bold flex items-center">
                             <i class="fas fa-check-circle text-primary mr-2"></i>
@@ -214,7 +235,7 @@
                         </h4>
                         <p class="ml-8">ロゴやイメージをお預かりするだけ。見栄えの良いデザインに仕上げます。</p>
                     </div>
-                    
+
                     <div class="mb-4">
                         <h4 class="text-xl font-bold flex items-center">
                             <i class="fas fa-check-circle text-primary mr-2"></i>
@@ -222,7 +243,7 @@
                         </h4>
                         <p class="ml-8">ご契約時や月額の費用は一切かかりません。必要な時に必要なものだけ。</p>
                     </div>
-                    
+
                     <div class="mb-4">
                         <h4 class="text-xl font-bold flex items-center">
                             <i class="fas fa-check-circle text-primary mr-2"></i>
@@ -232,13 +253,14 @@
                     </div>
                 </div>
             </div>
-            </div></section>
+        </div>
+    </section>
 
-       <!-- 依頼フロー -->
+    <!-- 依頼フロー -->
     <section class="section bg-white" id="flow">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">TOSYOへの基本ご依頼フロー</h2>
-            
+
             <div class="flex flex-col md:flex-row flex-wrap">
                 <div class="md:w-1/2 px-4 mb-8">
                     <div class="step-blue">
@@ -253,7 +275,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/2 px-4 mb-8">
                     <div class="step-blue">
                         <div class="step-blue-number">2</div>
@@ -267,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/2 px-4 mb-8">
                     <div class="step-blue">
                         <div class="step-blue-number">3</div>
@@ -281,7 +303,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="md:w-1/2 px-4 mb-8">
                     <div class="step-blue">
                         <div class="step-blue-number">4</div>
@@ -296,7 +318,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-10 text-center">
                 <a href="#contact" class="btn-primary inline-block text-lg">
                     まずは無料相談から <i class="fas fa-arrow-right ml-2"></i>
@@ -309,11 +331,11 @@
     <section class="section bg-secondary" id="price">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">シンプルな料金体系</h2>
-                   <div class="text-center mb-8">
+            <div class="text-center mb-8">
                 <p class="text-2xl font-bold text-primary">ご契約時や月額の費用は一切かかりません</p>
                 <p class="text-gray-600">必要な時に、必要なものだけ。無駄なコストはかかりません。</p>
             </div>
-            
+
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <table class="w-full">
                     <thead>
@@ -342,10 +364,11 @@
                     </tbody>
                 </table>
             </div>
-                    <div class="mt-12 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+            <div class="mt-12 bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image4.png" alt="キャンペーン" class="w-20 h-20 rounded-full object-cover">
+                        <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image4.png"
+                            alt="キャンペーン" class="w-20 h-20 rounded-full object-cover">
                     </div>
                     <div class="ml-6">
                         <div class="campaign-badge">初回お試しキャンペーン</div>
@@ -355,74 +378,88 @@
                     </div>
                 </div>
             </div>
-        </div></section>
-   <!-- 基本商品 -->
+        </div>
+    </section>
+    <!-- 基本商品 -->
     <section class="section bg-white" id="products">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">基本商品ラインナップ</h2>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 名刺入れ -->
                 <div class="card-feature bg-white overflow-hidden">
-                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/meishiire.png" alt="レザー製名刺入れ" class="product-img">
+                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/meishiire.png"
+                        alt="レザー製名刺入れ" class="product-img">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">レザー製名刺入れ</h3>
                         <p class="text-gray-600">社名ロゴや商品パッケージで、貴社オリジナルの名刺入れをおつくりします。営業ツールとして人気です。レザー製ですので、高級感があります。</p>
 
                     </div>
                 </div>
-                
+
                 <!-- ステッカー -->
                 <div class="card-feature bg-white overflow-hidden">
-                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/sticker.png" alt="ステッカー" class="product-img">
+                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/sticker.png" alt="ステッカー"
+                        class="product-img">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">ステッカー</h3>
-                        <p class="text-gray-600">耐久性のあるPVC製です。ノベルティとしてだけでなく、様々な用途でご使用いただけます。サイズは50mm角内、70mm角内、100mm角内のホワイトステッカーにハーフカットで作成します。</p>
+                        <p class="text-gray-600">
+                            耐久性のあるPVC製です。ノベルティとしてだけでなく、様々な用途でご使用いただけます。サイズは50mm角内、70mm角内、100mm角内のホワイトステッカーにハーフカットで作成します。
+                        </p>
 
                     </div>
                 </div>
-                
+
                 <!-- マグカップ -->
                 <div class="card-feature bg-white overflow-hidden">
-                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image13.png" alt="マグカップ" class="product-img">
+                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image13.png" alt="マグカップ"
+                        class="product-img">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">マグカップ</h3>
-                        <p class="text-gray-600">応接室で使用するマグカップに社名ロゴや商品パッケージを使用すれば、お客様への印象付けになります。持ち手部分を除いて、全面印刷が可能です。陶器製で、１個ずつ専用箱に入れてお届け。</p>
- 
+                        <p class="text-gray-600">
+                            応接室で使用するマグカップに社名ロゴや商品パッケージを使用すれば、お客様への印象付けになります。持ち手部分を除いて、全面印刷が可能です。陶器製で、１個ずつ専用箱に入れてお届け。</p>
+
                     </div>
                 </div>
-                
+
                 <!-- アクリルキーホルダー・アクリルスタンド -->
                 <div class="card-feature bg-white overflow-hidden">
-                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/acryl.png" alt="アクリルキーホルダー・アクリルスタンド" class="product-img">
+                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/acryl.png"
+                        alt="アクリルキーホルダー・アクリルスタンド" class="product-img">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">アクリルキーホルダー・アクリルスタンド</h3>
-                        <p class="text-gray-600">貴社の商品パッケージやオリジナルキャラクターを使用し、ノベルティとしてだけでなく販売用としてもご活用いただけます。キーホルダー・スタンドともに、サイズは50mm角内、70mm角内、100mm角内の展開。</p>
- 
+                        <p class="text-gray-600">
+                            貴社の商品パッケージやオリジナルキャラクターを使用し、ノベルティとしてだけでなく販売用としてもご活用いただけます。キーホルダー・スタンドともに、サイズは50mm角内、70mm角内、100mm角内の展開。
+                        </p>
+
                     </div>
                 </div>
-                
+
                 <!-- スタッフTシャツ -->
                 <div class="card-feature bg-white overflow-hidden">
-                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image18.png" alt="スタッフTシャツ" class="product-img">
+                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image18.png"
+                        alt="スタッフTシャツ" class="product-img">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">スタッフTシャツ</h3>
                         <p class="text-gray-600">イベントなどで使用するスタッフ用のTシャツも１枚から作成できます。サイズはS、M、L、XLの展開です。</p>
- 
+
                     </div>
                 </div>
-                
+
                 <!-- トートバッグ -->
                 <div class="card-feature bg-white overflow-hidden">
-                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/totebags.png" alt="トートバッグ大・小" class="product-img">
+                    <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/totebags.png"
+                        alt="トートバッグ大・小" class="product-img">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">トートバッグ大・小</h3>
-                        <p class="text-gray-600">貴社の商品パッケージやオリジナルキャラクターを使用し、ノベルティとしてだけでなく販売用としてもご活用いただけます。A4が入る＜大＞と、ランチトートとして使える＜小＞のサイズ展開です。</p>
- 
+                        <p class="text-gray-600">
+                            貴社の商品パッケージやオリジナルキャラクターを使用し、ノベルティとしてだけでなく販売用としてもご活用いただけます。A4が入る＜大＞と、ランチトートとして使える＜小＞のサイズ展開です。
+                        </p>
+
                     </div>
                 </div>
             </div>
-            
+
             <div class="mt-10 text-center">
                 <p class="mb-4 text-gray-600">※上記以外の商品も多数取り扱っております。お気軽にお問い合わせください。</p>
                 <a href="#contact" class="btn-primary inline-block text-lg">
@@ -431,7 +468,7 @@
             </div>
         </div>
     </section>
-        <!-- <div class="flex items-end gap-3">
+    <!-- <div class="flex items-end gap-3">
 
   <img src="your-image.jpg" alt="話している人" class="w-10 h-10 rounded-full object-cover" />
 
@@ -450,180 +487,186 @@
     <section class="section bg-secondary" id="cases">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-12">TOSYOご利用事例</h2>
-        <div>
-          <div class="case_box">
-            <div class="case">
-              <h3>CASE1：少量ロット対応
-              </h3>
-              <div class="bal-l">
-                <img src="./image/image7.png" alt="話している人" />
-                <div>
-                  <p class="text-sm text-gray-800">
-                    特製ノベルティの大量在庫をかかえたくないが、常に10個が社内に置いてあるようにしたいです…
-                  </p>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="bal-r">
-                <div class="">
-                  <p class="text-sm text-gray-800">
-                  <p>必要数だけ製造可能です！<br>一度商品登録しておけば、次からは個数を指定するだけで発注可能です。</p>
+            <div>
+                <div class="case_box">
+                    <div class="case">
+                        <h3>CASE1：少量ロット対応
+                        </h3>
+                        <div class="bal-l">
+                            <img src="./image/image7.png" alt="話している人" />
+                            <div>
+                                <p class="text-sm text-gray-800">
+                                    特製ノベルティの大量在庫をかかえたくないが、常に10個が社内に置いてあるようにしたいです…
+                                </p>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="bal-r">
+                            <div class="">
+                                <p class="text-sm text-gray-800">
+                                <p>必要数だけ製造可能です！<br>一度商品登録しておけば、次からは個数を指定するだけで発注可能です。</p>
 
-                  <div></div>
-                  <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img src="./image/image4.png" alt="話している人" />
+                        </div>
+                    </div>
+
+
+
+                    <div class="case">
+                        <h3>CASE2：プレミアム名入れギフト
+                        </h3>
+                        <div class="bal-l">
+                            <img src="./image/image7.png" alt="話している人" />
+                            <div>
+                                <p class="text-sm text-gray-800">
+                                    新入社員への入社記念品として、何か特別なものを用意したかったのですが...
+                                </p>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="bal-r">
+                            <div class="">
+                                <p class="text-sm text-gray-800">
+                                <p>レザー製の名刺入れに、入社年度の特別なデザインを作成し、新入社員の名前入りで製造することも可能です。
+                                </p>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img src="./image/image4.png" alt="話している人" />
+                        </div>
+                    </div>
+
+
+                    <div class="case">
+
+                        <h3>CASE3：販売用グッズ企画
+                        </h3>
+                        <div class="bal-l">
+                            <img src="./image/image7.png" alt="話している人" />
+                            <div>
+                                <p class="text-sm text-gray-800">
+                                    商品パッケージをグッズ化してみたいけど、何から始めればいいか分からない…
+                                </p>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="bal-r">
+                            <div class="">
+                                <p class="text-sm text-gray-800">
+                                <p>お気軽にご相談ください！<br>ターゲット層に応じて、商品ラインアップのご提案も可能です。
+                                </p>
+
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img src="./image/image4.png" alt="話している人" />
+                        </div>
+                    </div>
+
+
+                    <div class="case">
+
+                        <h3>CASE4：販売方法提案
+                        </h3>
+                        <div class="bal-l">
+                            <img src="./image/image7.png" alt="話している人" />
+                            <div>
+                                <p class="text-sm text-gray-800">
+                                    IP（商品ロゴ、パッケージ、オリジナルキャラクターなど）をつかってグッズ販売をしたい…
+
+                                </p>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="bal-r">
+                            <div class="">
+                                <p class="text-sm text-gray-800">
+                                <p>お気軽にご相談ください！<br>オンラインストア構築など、販売方法についてもご相談承ります。
+
+                                </p>
+
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <img src="./image/image4.png" alt="話している人" />
+                        </div>
+                    </div>
                 </div>
-                <img src="./image/image4.png" alt="話している人" />
-              </div>
             </div>
 
 
 
-            <div class="case">
-              <h3>CASE2：プレミアム名入れギフト
-              </h3>
-              <div class="bal-l">
-                <img src="./image/image7.png" alt="話している人" />
-                <div>
-                  <p class="text-sm text-gray-800">
-                    新入社員への入社記念品として、何か特別なものを用意したかったのですが...
-                  </p>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="bal-r">
-                <div class="">
-                  <p class="text-sm text-gray-800">
-                  <p>レザー製の名刺入れに、入社年度の特別なデザインを作成し、新入社員の名前入りで製造することも可能です。
-                  </p>
-                  <div></div>
-                  <div></div>
-                </div>
-                <img src="./image/image4.png" alt="話している人" />
-              </div>
-            </div>
-
-
-            <div class="case">
-
-              <h3>CASE3：販売用グッズ企画
-              </h3>
-              <div class="bal-l">
-                <img src="./image/image7.png" alt="話している人" />
-                <div>
-                  <p class="text-sm text-gray-800">
-                    商品パッケージをグッズ化してみたいけど、何から始めればいいか分からない…
-                  </p>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="bal-r">
-                <div class="">
-                  <p class="text-sm text-gray-800">
-                  <p>お気軽にご相談ください！<br>ターゲット層に応じて、商品ラインアップのご提案も可能です。
-                  </p>
-
-                  <div></div>
-                  <div></div>
-                </div>
-                <img src="./image/image4.png" alt="話している人" />
-              </div>
-            </div>
-
-
-            <div class="case">
-
-              <h3>CASE4：販売方法提案
-              </h3>
-              <div class="bal-l">
-                <img src="./image/image7.png" alt="話している人" />
-                <div>
-                  <p class="text-sm text-gray-800">
-                    IP（商品ロゴ、パッケージ、オリジナルキャラクターなど）をつかってグッズ販売をしたい…
-
-                  </p>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="bal-r">
-                <div class="">
-                  <p class="text-sm text-gray-800">
-                  <p>お気軽にご相談ください！<br>オンラインストア構築など、販売方法についてもご相談承ります。
-
-                  </p>
-
-                  <div></div>
-                  <div></div>
-                </div>
-                <img src="./image/image4.png" alt="話している人" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-         <!-- 活用提案 -->
+            <!-- 活用提案 -->
             <div class="mt-16">
                 <h3 class="text-2xl font-bold text-center mb-8">ご活用アイデア</h3>
-                
+
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- 提案1 -->
                     <div class="bg-white p-6 rounded-lg shadow">
                         <h4 class="text-xl font-bold mb-4">新入社員への入社記念に</h4>
                         <div class="flex items-center">
                             <div class="w-1/3">
-                                <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image19.png" alt="レザー名刺入れ" class="rounded-lg">
+                                <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/image19.png"
+                                    alt="レザー名刺入れ" class="rounded-lg">
                             </div>
                             <div class="w-2/3 pl-4">
-                                <p>貴社の商品パッケージを配置してデザインした名刺入れを新入社員にお配りするのはいかがでしょうか？社員様の御社ブランドへの意識も高まるとともに、名刺交換の際にお客様の目に触れるため、ブランディングや広告としての役割も果たします。</p>
+                                <p>貴社の商品パッケージを配置してデザインした名刺入れを新入社員にお配りするのはいかがでしょうか？社員様の御社ブランドへの意識も高まるとともに、名刺交換の際にお客様の目に触れるため、ブランディングや広告としての役割も果たします。
+                                </p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- 提案2 -->
                     <div class="bg-white p-6 rounded-lg shadow">
                         <h4 class="text-xl font-bold mb-4">フリーアドレスの席札</h4>
                         <div class="flex items-center">
                             <div class="w-1/3">
-                                <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/zaseki.png" alt="席札" class="rounded-lg">
+                                <img src="https://tosyopages.github.io/marketing/20250528_pkg_common/image/zaseki.png"
+                                    alt="席札" class="rounded-lg">
                             </div>
                             <div class="w-2/3 pl-4">
-                                <p>フリーアドレスの席を確保する席札を社員様おひとりおひとりの写真、お名前つきでアクリルスタンドとしておつくりするのはいかがでしょうか？オフィスの雰囲気も明るくなり、コミュニケーションの活性化にも役立ちます。</p>
+                                <p>フリーアドレスの席を確保する席札を社員様おひとりおひとりの写真、お名前つきでアクリルスタンドとしておつくりするのはいかがでしょうか？オフィスの雰囲気も明るくなり、コミュニケーションの活性化にも役立ちます。
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-  </section>
+    </section>
     <!-- お問い合わせ -->
     <section class="section bg-white" id="contact">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-8">お問い合わせ</h2>
             <p class="text-center text-lg mb-12">まずは無料相談から。あなたの会社に最適なグッズをご提案します。</p>
-            
+
             <div class="max-w-2xl mx-auto bg-secondary p-8 rounded-lg shadow-lg">
                 <div class="flex flex-col md:flex-row items-center mb-8">
 
                     <div class="w-full text-center">
                         <h3 class="text-2xl font-bold mb-4">メールでのお問い合わせ</h3>
-                        <p class="text-xl font-bold text-primary"><a class="hover:text-shadow" href="partner@tosyo.co.jp">partner@tosyo.co.jp</a></p>
+                        <p class="text-xl font-bold text-primary"><a class="hover:text-shadow"
+                                href="partner@tosyo.co.jp">partner@tosyo.co.jp</a></p>
                         <p class="text-gray-600 mt-2">24時間受付中</p>
                     </div>
                 </div>
-                
+
                 <div class="text-center">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSegJHSQcE3bZWqFjTguftF7RsVbuex3JiLz2ocUwddl0w6qXg/viewform?usp=dialog" class="btn-primary inline-block text-lg py-3 px-8">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSegJHSQcE3bZWqFjTguftF7RsVbuex3JiLz2ocUwddl0w6qXg/viewform?usp=dialog"
+                        class="btn-primary inline-block text-lg py-3 px-8">
                         Webお問い合わせフォーム <i class="fas fa-paper-plane ml-2"></i>
                     </a>
                     <p class="mt-4 text-sm text-gray-600">※お問い合わせいただいた方に、サービス資料をお送りいたします。</p>
                 </div>
             </div>
-            
+
             <div class="mt-16 text-center">
                 <h3 class="text-2xl font-bold mb-6">初回限定お試しキャンペーン実施中！</h3>
                 <div class="campaign-badge mx-auto">期間限定</div>
@@ -634,10 +677,10 @@
     </section>
 
 
-  <section id="footer" class="flex flex-col bg-gray-900 h-30 mx-auto justify-center">
-    <div class="text-white text-center">TOSYO株式会社</div>
-    <div class="text-white text-center"><a href="https://tosyo.co.jp">https://tosyo.co.jp</a></div>
-  </section>
+    <section id="footer" class="flex flex-col bg-gray-900 h-30 mx-auto justify-center">
+        <div class="text-white text-center">TOSYO株式会社</div>
+        <div class="text-white text-center"><a href="https://tosyo.co.jp">https://tosyo.co.jp</a></div>
+    </section>
 </body>
 
 </html>
